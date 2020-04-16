@@ -1,29 +1,17 @@
 <?php
+	$portfolio = [
+	['title' => 'Proyecto #1'],
+	['title' => 'Proyecto #2'],
+	['title' => 'Proyecto #3'],
+	['title' => 'Proyecto #4'],
+	];
 
-//aprendible.com = Route::get('/', function)
-//aprendible.com/contacto = Route::get('contacto', function)
 
+Route::view('/','home')->name('home');
+Route::view('/about','about')->name('about');
+Route::view('/contacto','contacto')->name('contacto');
+Route::view('/portfolio','portfolio', compact('portfolio'))->name('portfolio');
 
-
-
-//RUTAS CON PARAMETROS..
-//Route::get('saludo/{nombre?}', function($nombre = "Invitado"){
-//	return "Saludos " . $nombre ;
-//});
-
-//RUTAS CON NOMBRE
-Route::get('/', function(){
-	return "Seccion de contactos";
-
-})name('contactos');
-
-Route::get('/', function(){
-	echo "<a href='" . route('contactos') . "'>Contactos 1</a><br>";
-	echo "<a href='" . route('contactos') . "'>Contactos 2</a><br>";
-	echo "<a href='" . route('contactos') . "'>Contactos 3</a><br>";
-	echo "<a href='" . route('contactos') . "'>Contactos 4</a><br>";
-	echo "<a href='" . route('contactos') . "'>Contactos 5</a><br>";
-});
 
 
 
