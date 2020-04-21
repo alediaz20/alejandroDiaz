@@ -14,6 +14,12 @@ Route::view('/portfolio','portfolio', compact('portfolio'))->name('portfolio');
 
 
 
+Route::get('/prueba', function () {
+    return view ('prueba');
+});
+
+
+
 
 // Route::get('/', function(){
 //	return "Hola desde la pagina de inicio";
