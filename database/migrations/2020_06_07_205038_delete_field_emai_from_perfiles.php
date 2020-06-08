@@ -23,7 +23,8 @@ class DeleteFieldEmaiFromPerfiles extends Migration
      */
     public function down()
     {
-        Schema::table('perfiles', function (Blueprint $table) {
+        Schema::table('perfiles', function (Blueprint $table)
+        {
             $table->string('email');
         });
     }

@@ -17,11 +17,10 @@ class PerfilesSeeder extends Seeder
        $faker = Faker::create('es_ES');
         for ($i = 0; $i < 50; $i++) {
              DB::table('perfiles')->insert(array(
-                'nomre' => $faker->firstNameMale,
-                'email'  => $faker->email,
-                'facebook'   => $faker->facebook,
-                'instagram' => $faker->instagram,
-                'twitter' => $faker->twitter,
+                'nombre' => $faker->firstNameMale,
+                'facebook'   => $faker->lastName,
+                'instagram' => $faker->lastName,
+                'twitter' => $faker->lastName,
                 'created_at' => date('Y-m-d H:m:s'),
                 'updated_at' => date('Y-m-d H:m:s'),
             ));
